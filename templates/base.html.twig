@@ -12,6 +12,9 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+    {% if app.user %}
+        {% include 'shared/top_navbar.html.twig' %}
+    {% endif %}
+    {% block body %}{% endblock %}
     </body>
 </html>
